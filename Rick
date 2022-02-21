@@ -25,18 +25,18 @@ _get_repolink () {
 
 _setting_bot () {
     local zippath
-    zippath="JmthonBot.zip"
-    echo "  يتم تحميل ملفات سورس ريك ..."
+    zippath="RickBot.zip"
+    echo "- يتم تحميل ملفات سورس ريك ⏳"
     wget -q $(_get_repolink) -O "$zippath"
-    echo "  فك بيانات السورس ..."
+    echo "- فك بيانات سورس ريك ⚙️"
     rickpath=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
-    echo "✓"
-    echo "  يتم التفريغ.."
+    echo "- تم فك وتحميل الملفات وبيانات سورس ريك 🔨"
+    echo "- يتم التفريغ ⛓"
     rm -rf "$zippath"
     sleep 5
     cd $rickpath
-    echo "    بدء بوت ريك    "
+    echo "- يتم البدء في تحميل سورس ريك ⌛️"
     echo "
     
       ___                       ___           ___     
